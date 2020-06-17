@@ -1,2 +1,2 @@
-# snmC-seq2
+# snmCT-seq
 

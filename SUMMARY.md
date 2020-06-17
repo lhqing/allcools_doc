@@ -1,11 +1,14 @@
 # Table of contents
 
-* [Before Start](README.md)
+* [Getting Started](README.md)
+* [Installation](installation.md)
 
 ## The technology
 
-* [snmC-seq](the-technology/snmc-seq.md)
-* [snmC-seq2](the-technology/snmc-seq2.md)
+* [snmC-seq2/3](the-technology/snmc-seq.md)
+* [snmCT-seq](the-technology/snmc-seq2.md)
+* [snm3C-seq](the-technology/snm3c-seq.md)
+* [NOMe treatment](the-technology/nome-treatment.md)
 
 ## Data format
 
