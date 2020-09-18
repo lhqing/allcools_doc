@@ -2,7 +2,11 @@
 description: Prepare bcl2fastq sample sheet for demultiplexing illumina primer index
 ---
 
-# \[inhouse\] Prepare Sample Sheet
+# 🏠 Prepare Sample Sheet
+
+{% hint style="warning" %}
+This is an inhouse step usually only needed in the Ecker lab for raw sequencing data.
+{% endhint %}
 
 ## Related Commands
 

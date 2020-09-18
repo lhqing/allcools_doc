@@ -1,2 +1,2 @@
-# snmC2T-seq \(mCT + NOMe\)
+# NOMe treated
 

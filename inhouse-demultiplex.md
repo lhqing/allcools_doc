@@ -1,4 +1,8 @@
-# \[inhouse\] Demultiplex
+# 🏠 Demultiplex
+
+{% hint style="warning" %}
+This is an inhouse step usually only needed in the Ecker lab for raw sequencing data.
+{% endhint %}
 
 In the previous step, we generated sample sheets based on the PlateInfo file and then used Illumina bcl2fastq to demultiplex BCL files from the sequencer. The bcl2fastq command only demultiplexed the barcodes on the Illumina primers. Therefore, each set of FASTQ files still contain reads mixed from multiple cells \(eight cells in V1; 384 cells in V2\). This step further demultiplex barcodes on the random primers, generating raw FASTQ file pairs for every single cell.
 

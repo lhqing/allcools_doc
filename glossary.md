@@ -1,8 +1,2 @@
 # Glossary
 
-## NOMe
-
-## UID
-
-\#
-
