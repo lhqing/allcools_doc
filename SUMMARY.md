@@ -1,6 +1,6 @@
 # Table of contents
 
-* [YAP for snmC-based technologies](README.md)
+* [Before Start](README.md)
 * [Installation](installation.md)
 
 ## TECH BACKGROUND
@@ -20,15 +20,25 @@
 
 ---
 
-* [🏠 Prepare Sample Sheet](inhouse-prepare-sample-sheet.md)
-* [🏠 Demultiplex](inhouse-demultiplex.md)
-* [Mapping](mapping-2.md)
-* [Mapping Summary and Metrics](mapping-summary-and-metrics.md)
-* [Example](example/README.md)
-  * [snmC-seq2](example/snmc-seq2.md)
-  * [snmC-seq3](example/snmc-seq3.md)
-  * [snmCT-seq](example/snmct-seq.md)
-  * [snm3C-seq](example/snm3c-seq.md)
-  * [NOMe treated](example/snmc2t-seq-mct-+-nome.md)
-* [Glossary](glossary.md)
+* [Prepare PlateInfo & bcl2fastq SampleSheet](inhouse-prepare-sample-sheet.md)
+* [Prepare Mapping Config](prepare-mapping-config.md)
+* [Demultiplex](inhouse-demultiplex.md)
+* [Mapping](mapping-2/README.md)
+  * [Mapping Form Cell-Level FASTQ Files](mapping-2/mapping-form-cell-level-fastq-files.md)
+  * [Mapping Via Qsub](mapping-2/mapping-via-qsub.md)
+  * [Mapping Via Sbatch](mapping-2/mapping-via-sbatch.md)
+  * [Trouble Shooting](mapping-2/trouble-shooting.md)
+  * [Mapping Results](mapping-2/example/README.md)
+    * [snmC-seq2 - V1 Barcode](mapping-2/example/snmc-seq2.md)
+    * [snmC-seq3 - V2 Barcode](mapping-2/example/snmc-seq3.md)
+    * [snmCT-seq - V1 Barcode](mapping-2/example/snmct-seq.md)
+    * [snm3C-seq - V1 Barcode](mapping-2/example/snm3c-seq.md)
+    * [NOMe treatment](mapping-2/example/snmc2t-seq-mct-+-nome.md)
+* [Mapping Summary](mapping-summary-and-metrics/README.md)
+  * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
+
+## Other
+
+* [FAQ](other/faq.md)
+* [Changelog](other/changelog.md)
 

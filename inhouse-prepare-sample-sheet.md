@@ -2,11 +2,7 @@
 description: Prepare bcl2fastq sample sheet for demultiplexing illumina primer index
 ---
 
-# 🏠 Prepare Sample Sheet
-
-{% hint style="warning" %}
-This is an inhouse step usually only needed in the Ecker lab for raw sequencing data.
-{% endhint %}
+# Prepare PlateInfo & bcl2fastq SampleSheet
 
 ## Related Commands
 
@@ -22,25 +18,25 @@ yap make-sample-sheet
 
 Library preparation information, most importantly:
 
-* The plate IDs in this library
-* The barcode information in this library
+* The plate IDs of this library
+* The barcode information of this library
 
 ## Step 1: Prepare a PlateInfo file
 
 ### What is the PlateInfo file?
 
 * A plain text file with experimental, library, and barcoding information.
-* This file needs to be made manually for each library.
+* **This file needs to be made manually for each library.**
 * The main content of this file is the **barcoding information for each plate in the library**, so the pipeline can properly **demultiplex and name the single-cell files** with that information
-* The initial 8-random-index barcoding version is V1, the 384-random index barcoding version is V2
+* The initial 8-random-index barcoding version is called V1, the 384-random index barcoding version is called V2
 
-### Get plate\_info.txt template and manually edit plate and barcode information
+### Get PlateInfo file template and manually edit plate and barcode information
 
 ```text
-# V1
+# print V1 template
 yap default-plate-info -v V1
 
-# V2
+# print V2 template
 yap default-plate-info -v V2
 ```
 
@@ -53,7 +49,7 @@ yap default-plate-info -v V2
 * Possible primer\_quarter values are:
   * SetB\_Q1, SetB\_Q2, SetB\_Q3, SetB\_Q4
   * Set1\_Q1, Set1\_Q2, Set1\_Q3, Set1\_Q4
-* Each primer\_quarter appears no more than twice for the same NovaSeq run.
+* Each primer\_quarter appears no more than twice for the same sequencing run.
 * **PlateInfo section must be Tab `\t` separated.**
 
 ```text
@@ -92,7 +88,7 @@ CEMBA190620_9C_4	SetB_Q4
 {% tab title="V2 Index Library" %}
 * This example contains four plates
 * Every plate has six multiplex groups
-* All primer names must be unique for the same NovaSeq run.
+* All primer names must be unique for the same sequencing run.
 * **PlateInfo section must be Tab `\t` separated.**
 
 ```text
@@ -153,10 +149,33 @@ DVC200116_P120_VC_B_M_2_4	6	J4
 * The sample sheet and name pattern are automatically generated so the pipeline can automatically parse cell information during and after mapping.
 * See usage in the command line `yap make-sample-sheet -h`
 
+```text
+yap make-sample-sheet -h
+usage: yap make-sample-sheet [-h] --plate_info_path PLATE_INFO_PATH
+                             --output_prefix OUTPUT_PREFIX
+                             [--header_path HEADER_PATH]
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+Required inputs:
+  --plate_info_path PLATE_INFO_PATH, -p PLATE_INFO_PATH
+                        Path of the plate information file. (default: None)
+  --output_prefix OUTPUT_PREFIX, -o OUTPUT_PREFIX
+                        Output prefix, will generate 2 sample sheets, 1 for
+                        miseq, 1 for novaseq (default: None)
+
+Optional inputs:
+  --header_path HEADER_PATH
+                        Path to the sample sheet header that contains
+                        sequencer info. Will use default if not provided.
+                        (default: None)
+```
+
 ## Output
 
 * PlateInfo file recording library preparation information
-* Two sample sheets for bcl2fastq demultiplexing. One for MiSeq, one for NovaSeq.
+* Two sample sheets for `bcl2fastq` demultiplexing. One for MiSeq, one for NovaSeq.
 
 
 

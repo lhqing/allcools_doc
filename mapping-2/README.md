@@ -8,11 +8,15 @@ All mapping pipelines for different kinds of libraries contain three steps.
 
 ## Input
 
-## Step 1. Prepare Mapping Config
 
-## Step 2. Prepare Mapping Commands
 
-## Step 3. Execute Mapping
+## Execute
+
+
+
+## Output
+
+
 
 
 
