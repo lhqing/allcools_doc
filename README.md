@@ -17,13 +17,18 @@ YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for sev
 ## Technologies Supported
 
 * [snmC-seq2 & 3](tech-background/snmc-seq.md): DNA methylome
-* snmCT-seq: DNA methylome + Transcriptom
+* snmCT-seq: DNA methylome + Transcriptome
 * snm3C-seq: DNA methylome + Chromatin Contact
 * [NOMe treated](tech-background/nome-treatment.md): X + Chromatin Accessibility
+
+## How to use?
+
+1. Make sure you understand the background of [cell barcoding](tech-background/barcoding.md) and the technology you use. If not, read the corresponding TECH BACKGROUND section.
+2. Follow the [installation tutorial](installation.md) to install yap and associated packages.
+3. Follow the MAPPING PIPELINE section, example of each 
+4. If you have question, first go to [FAQ](other/faq.md) page. **If problem is not solved,** [**post an issue on github**](https://github.com/lhqing/cemba_data)**.**
 
 ## After Mapping?
 
 Check out [ALLCools](https://github.com/lhqing/ALLCools), the package for downstream cell-level and cluster-level analysis.
-
-
 

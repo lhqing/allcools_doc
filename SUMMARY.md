@@ -5,11 +5,11 @@
 
 ## TECH BACKGROUND
 
+* [Barcoding](tech-background/barcoding.md)
 * [snmC-seq2 & 3](tech-background/snmc-seq.md)
 * [snmCT-seq](tech-background/snmct-seq.md)
 * [snm3C-seq](tech-background/snm3c-seq.md)
 * [NOMe treatment](tech-background/nome-treatment.md)
-* [Barcoding](tech-background/barcoding.md)
 
 ## Data formats
 
