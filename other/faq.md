@@ -51,3 +51,9 @@ $ which python
 
 * Currently, the pipeline don’t allow to change the sections and keys, so just change values according to your needs.
 
+## What is Snakemake?
+
+[Snakemake](https://snakemake.github.io/) is a package for writing reproducible pipeline. It use a `Snakefile` to describe all steps of a pipeline. During demultiplex, I prepared this file for you and saved it in each of the sub directory. All you need to do is execute these files \(via snakemake, commands also summarized during demultiplex\).
+
+
+
