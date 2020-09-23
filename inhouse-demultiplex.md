@@ -1,14 +1,19 @@
 # Demultiplex
 
-In the previous step, we generated sample sheets based on the PlateInfo file and then used Illumina `bcl2fastq` to demultiplex BCL files from the sequencer. The `bcl2fastq` command only demultiplexed the barcodes on the Illumina primers. **Therefore, each set of the `bcl2fastq` output FASTQ files still contain reads from multiple cells \(8 cells in V1; 64 cells in V2\).** This step further demultiplex barcodes on the random primers, generating raw FASTQ file pairs for every single cell.
-
-**Random index is trimmed after demultiplex.**
-
 ## Related Commands
 
 ```text
+# demultiplex the random index, generate cell-level FASTQ files
 yap demultiplex
 ```
+
+## Purpose
+
+The `bcl2fastq` command only demultiplexed the **PCR index**. **Therefore, each set of the raw FASTQ files still contain reads from several cells \(8 cells in V1; 64 cells in V2\).** This step further demultiplex **random index** on the 5' of R1, generating cell-level R1 and R2 FASTQ files.
+
+**Random index is trimmed after demultiplex. The random index name occur at the FASTQ file name, which combine with previous information to form the cell id.**
+
+**This step also prepares command for run mapping \(using snakemake\).**
 
 ## Input
 
@@ -56,12 +61,33 @@ Required inputs:
 
 ## Output
 
-
-
 * The random index sequence will be removed from the reads
   * 6bp removed from R1 5' in V1 indexed libraries.
   * 8bp removed from R1 5' in V2 indexed libraries.
 * Each cell will have two FASTQ files in the output directory, with a fixed name pattern:
   * `{cell_id}-R1.fq.gz` for R1
   * `{cell_id}-R2.fq.gz` for R2
+* Files are organized by the following structure
+
+```text
+output_dir
+├── CEMBA200709_9E_4-1-E18  # a set of FASTQ files
+│   ├── fastq
+|   |   ├──{cell1}-R1.fq.gz
+|   |   ├──{cell1}-R2.fq.gz
+|   |   ├──{cell2}-R1.fq.gz
+|   |   ├──{cell2}-R2.fq.gz
+|   |   ├──...
+|   |   ├── skipped  # some FASTQ files may be skipped due to too less or too much reads
+|   |   |   ├──...
+│   └── Snakefile  # command files for snakemake
+├── mapping_config.ini  # mapping config copied here
+├── snakemake  # this only occur when using yap in Ecker Lab server
+│   ├── qsub  # job script for qsub on gale
+│   └── sbatch  # job script for sbatch on stampede
+└── stats
+    ├── demultiplex.stats.csv
+    ├── fastq_dataframe.csv
+    └── UIDTotalCellInputReadPairs.csv
+```
 

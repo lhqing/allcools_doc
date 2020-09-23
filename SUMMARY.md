@@ -21,6 +21,7 @@
 ---
 
 * [Prepare PlateInfo & bcl2fastq SampleSheet](inhouse-prepare-sample-sheet.md)
+* [Prepare Reference Files](prepare-reference-files.md)
 * [Prepare Mapping Config](prepare-mapping-config.md)
 * [Demultiplex](inhouse-demultiplex.md)
 * [Mapping](mapping-2/README.md)

@@ -14,6 +14,10 @@ YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for sev
 
 [See source code on Github.](https://github.com/lhqing/cemba_data)
 
+### Author
+
+[Hanqing Liu](https://github.com/lhqing)
+
 ## Technologies Supported
 
 * [snmC-seq2 & 3](tech-background/snmc-seq.md): DNA methylome
