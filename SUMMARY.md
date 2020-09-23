@@ -6,25 +6,25 @@
 ## TECH BACKGROUND
 
 * [Barcoding](tech-background/barcoding.md)
-* [snmC-seq2 & 3](tech-background/snmc-seq.md)
-* [snmCT-seq](tech-background/snmct-seq.md)
-* [snm3C-seq](tech-background/snm3c-seq.md)
-* [NOMe treatment](tech-background/nome-treatment.md)
+* [🚧 snmC-seq2 & 3](tech-background/snmc-seq.md)
+* [🚧 snmCT-seq](tech-background/snmct-seq.md)
+* [🚧 snm3C-seq](tech-background/snm3c-seq.md)
+* [🚧 NOMe treatment](tech-background/nome-treatment.md)
 
 ## Data formats
 
-* [ALLC](data-formats/allc.md)
-* [MCDS](data-formats/mcds.md)
+* [🚧 ALLC](data-formats/allc.md)
+* [🚧 MCDS](data-formats/mcds.md)
 
 ## Mapping Pipeline <a id="mapping"></a>
 
 ---
 
 * [Prepare PlateInfo & bcl2fastq SampleSheet](inhouse-prepare-sample-sheet.md)
-* [Prepare Reference Files](prepare-reference-files.md)
-* [Prepare Mapping Config](prepare-mapping-config.md)
+* [Prepare Mapping Config](prepare-mapping-config/README.md)
+  * [🚧 Prepare Reference Files](prepare-mapping-config/prepare-reference-files.md)
 * [Demultiplex](inhouse-demultiplex.md)
-* [Mapping](mapping-2/README.md)
+* [🚧 Mapping](mapping-2/README.md)
   * [Mapping Form Cell-Level FASTQ Files](mapping-2/mapping-form-cell-level-fastq-files.md)
   * [Mapping Via Qsub](mapping-2/mapping-via-qsub.md)
   * [Mapping Via Sbatch](mapping-2/mapping-via-sbatch.md)
@@ -35,7 +35,7 @@
     * [snmCT-seq - V1 Barcode](mapping-2/example/snmct-seq.md)
     * [snm3C-seq - V1 Barcode](mapping-2/example/snm3c-seq.md)
     * [NOMe treatment](mapping-2/example/snmc2t-seq-mct-+-nome.md)
-* [Mapping Summary](mapping-summary-and-metrics/README.md)
+* [🚧 Mapping Summary](mapping-summary-and-metrics/README.md)
   * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
 
 ## Other
