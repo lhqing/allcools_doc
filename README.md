@@ -3,7 +3,7 @@
 ## Important Note
 
 {% hint style="warning" %}
-YAP is currently an **in-house** pipeline designed for raw sequencing data \(BCL files and raw FASTQ files before demultiplex\) generated [in the Ecker Lab](https://ecker.salk.edu/). In the future, YAP may become more generalizable, but right now \(due to time limit\) I can only support needs within the lab.
+YAP is currently an **in-house** pipeline designed for raw sequencing data \(BCL files and raw FASTQ files before demultiplex\) generated [in the Ecker Lab](https://ecker.salk.edu/). In the future, YAP may become more generalizable.
 
 **If you download our published data and want to remap using the cell-level FASTQ files,** [**I provided a tutorial here**](mapping-2/mapping-form-cell-level-fastq-files.md)**.**
 {% endhint %}
