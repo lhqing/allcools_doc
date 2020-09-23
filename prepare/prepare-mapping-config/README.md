@@ -12,7 +12,7 @@ yap default-mapping-config
 In this step, you need to prepare a MappingConfig file that contains all the parameters for the mapping pipeline. **Mainly, the path to the genome reference files.**
 
 {% hint style="info" %}
-[What is MappingConfig file?](../other/faq.md#what-is-mappingconfig-file)
+[What is MappingConfig file?](../../other/faq.md#what-is-mappingconfig-file)
 {% endhint %}
 
 ## Input
@@ -51,11 +51,11 @@ optional arguments:
 
 ### Example of MappingConfig files
 
-{% file src="../.gitbook/assets/mc-v2.mouse.mapping\_config.ini" caption="snmC-seq3, Mouse, V2 barcode" %}
+{% file src="../../.gitbook/assets/mc-v2.mouse.mapping\_config.ini" caption="snmC-seq3, Mouse, V2 barcode" %}
 
-{% file src="../.gitbook/assets/mct-v2.mouse.mapping\_config.ini" caption="snmCT-seq, Mouse, V2 barcode" %}
+{% file src="../../.gitbook/assets/mct-v2.mouse.mapping\_config.ini" caption="snmCT-seq, Mouse, V2 barcode" %}
 
-{% file src="../.gitbook/assets/m3c-v2.human.mapping\_config.ini" caption="snm3C-seq, Human, V2 barcode" %}
+{% file src="../../.gitbook/assets/m3c-v2.human.mapping\_config.ini" caption="snm3C-seq, Human, V2 barcode" %}
 
 ## Step 2 - Review
 

@@ -19,7 +19,7 @@ yap make-sample-sheet
 In this step, we prepare a **PlateInfo file** that contains sample metadata and **PCR index information** of the plates in your library. These information is used to generate a **SampleSheet** file for `bcl2fastq` to demultiplex the PCR index when generate raw FASTQ files.
 
 {% hint style="info" %}
-[What is the PlateInfo file?](other/faq.md#what-is-plateinfo-file)
+[What is the PlateInfo file?](../other/faq.md#what-is-plateinfo-file)
 {% endhint %}
 
 ## Input
