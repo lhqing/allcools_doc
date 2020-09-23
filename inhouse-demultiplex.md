@@ -13,7 +13,7 @@ The `bcl2fastq` command only demultiplexed the **PCR index**. **Therefore, each 
 
 **Random index is trimmed after demultiplex. The random index name occur at the FASTQ file name, which combine with previous information to form the cell id.**
 
-**This step also prepares command for run mapping \(using snakemake\).**
+**This step also prepares command for run mapping \(using** [**snakemake**](https://snakemake.readthedocs.io/en/stable/)**\).**
 
 ## Input
 
@@ -51,7 +51,7 @@ Required inputs:
 {% hint style="info" %}
 * It took several minutes to demultiplex MiSeq files, several hours to demultiplex NovaSeq FASTQ files \(~100GB / h with 16 cores\). 
 * This command creates lots of files simultaneously, in order to prevent too much burden on the file system, I set max CPU = 16
-* Remember to use " to quote the fastq pattern like this: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
+* Remember to use "" to quote the fastq pattern like this, other wise the wildcard will be expanded in shell and cause error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
 * An error will occur if `output_dir`already exists.
 {% endhint %}
 
@@ -67,7 +67,7 @@ Required inputs:
 * Each cell will have two FASTQ files in the output directory, with a fixed name pattern:
   * `{cell_id}-R1.fq.gz` for R1
   * `{cell_id}-R2.fq.gz` for R2
-* Files are organized by the following structure
+* Files are organized by the following structure**, a minimum example is also attached bellow.**
 
 ```text
 output_dir
@@ -81,13 +81,21 @@ output_dir
 |   |   ├── skipped  # some FASTQ files may be skipped due to too less or too much reads
 |   |   |   ├──...
 │   └── Snakefile  # command files for snakemake
+├── (Other sets)
+│   ├── fastq
+|   |   ├──...
+|   |   ├── skipped
+|   |   |   ├──...
+│   └── Snakefile
 ├── mapping_config.ini  # mapping config copied here
 ├── snakemake  # this only occur when using yap in Ecker Lab server
 │   ├── qsub  # job script for qsub on gale
-│   └── sbatch  # job script for sbatch on stampede
-└── stats
+│   └── sbatch  # job script for sbatch on stampede2
+└── stats  # place for summary stats
     ├── demultiplex.stats.csv
     ├── fastq_dataframe.csv
     └── UIDTotalCellInputReadPairs.csv
 ```
+
+{% file src=".gitbook/assets/snmc-seq3.miseq.v2.tgz" caption="snmC-seq3, MiSeq, V2 barcode, demultiplex results" %}
 

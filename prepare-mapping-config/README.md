@@ -17,7 +17,7 @@ In this step, you need to prepare a MappingConfig file that contains all the par
 
 ## Input
 
-* All the genome reference files you prepared
+* All the genome reference files, [see how to prepare here](prepare-reference-files.md).
 * Technology type
 * Barcoding version
 
@@ -48,6 +48,14 @@ optional arguments:
   --nome                Does this library have NOMe treatment? (default:
                         False)
 ```
+
+### Example of MappingConfig files
+
+{% file src="../.gitbook/assets/mc-v2.mouse.mapping\_config.ini" caption="snmC-seq3, Mouse, V2 barcode" %}
+
+{% file src="../.gitbook/assets/mct-v2.mouse.mapping\_config.ini" caption="snmCT-seq, Mouse, V2 barcode" %}
+
+{% file src="../.gitbook/assets/m3c-v2.human.mapping\_config.ini" caption="snm3C-seq, Human, V2 barcode" %}
 
 ## Step 2 - Review
 
