@@ -8,7 +8,7 @@ This section is only for debugging purposes. **Do not run mapping on the local s
 
 In each of the sub-directory, you can directly run snakemake to map or **dry-run** the mapping.
 
-All mapping commands are depent on each other, **the last command can visualize the command dependency graph for this sub-dir. An example `dag.svg` is attached below.**
+All mapping commands depend on each other, **the last command can visualize the command dependency graph for this sub-dir. An example `dag.svg` is attached below.**
 
 ```text
 # go to a certain sub-dir that has the Snakefile
@@ -24,7 +24,7 @@ $ snakemake --dag | dot -Tsvg > dag.svg
 
 {% file src="../.gitbook/assets/dag \(1\).svg" caption="Visualization of snmC-seq3 mapping commands of a sub-directory" %}
 
-## Trouble shooting
+## Troubleshooting
 
-As shown in the visualization above, Snakefile contains dependent rules for the sub-directory. **Each rule corresponding to a shell command.** If you see any error occur during execution of snakemake on qsub or sbatch, you need to read the stderr and find out which command/rule is the reason causing failure. You can then copy the command and analyze the error information. You may execute that command again locally \(or via a separate job\) to see if it reoccur.
+As shown in the visualization above, Snakefile contains dependent rules for the sub-directory. **Each rule corresponding to a shell command.** If you see any error that occurs during the execution of snakemake on qsub or sbatch, you need to read the stderr and find out which command/rule is the reason causing failure. You can then copy the command and analyze the error information. You may execute that command again locally \(or via a separate job\) to see if it reoccur.
 
