@@ -1,7 +1,7 @@
 # Mapping Via Sbatch
 
 {% hint style="warning" %}
-Content on this page only related to the Ecker Lab servers. But the same idea can be apply to any other servers with some modification.
+Content on this page only related to the Ecker Lab servers. But the same idea can be applied to any other servers with some modification.
 {% endhint %}
 
 {% hint style="info" %}
@@ -9,12 +9,12 @@ Content on this page only related to the Ecker Lab servers. But the same idea ca
 {% endhint %}
 
 {% hint style="danger" %}
-Remember you need to copy the genome reference files to stampede2 and use the corresponding MappingConfig file for demultiplex.
+Remember you need to copy the genome reference files to stampede2 and use the corresponding MappingConfig file for demultiplexing.
 {% endhint %}
 
 ## Input
 
-After demultiplex, all the snakemake command is also summarized in the `{output_dir}/snakemake/sbatch` directory. 
+After demultiplexing, all the snakemake command is also summarized in the `{output_dir}/snakemake/sbatch` directory. 
 
 The `snakemake_cmd.txt` contains all the snakemake command for all PCR index sub-directories. 
 
@@ -60,7 +60,7 @@ rsync -arv {output_dir} tacc:scratch/
 
 ## Execute
 
-Just like qsub, you only need to execute the sbatch.sh. It will generate all the sbatch script for each snakemake command and execute them. And it will also wait for all command to finish before exit. I do not recommend run this as a separate sbatch job, because the execution time could be long. You can just execute this in a screen or `nohup`
+Just like qsub, you only need to execute the sbatch.sh. It will generate all the sbatch script for each snakemake command and execute them. And it will also wait for all command to finish before exit. I do not recommend to run this as a separate sbatch job, because the execution time is long. You can just execute this in a screen or `nohup`
 
 ```text
 # open a screen
@@ -79,7 +79,7 @@ The output files are the same as [qsub output files](mapping-via-qsub.md#output)
 
 ## Transfer Files Back
 
-After mapping, you can `rsync` the whole `output_dir` from the remote server back to the same location, while skip all the FASTQ files \(because they are unchanged\).
+After mapping, you can `rsync` the whole `output_dir` from the remote server back to the same location. If you `rsync` to the same path, you may skip the FASTQ files because they are unchanged during mapping.
 
 ```text
 # the {output_dir} is the same dir uploaded to tacc

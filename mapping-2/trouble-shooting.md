@@ -1,14 +1,14 @@
 # Mapping Locally
 
 {% hint style="info" %}
-This section is only for debug purpose. **Do not run mapping on local server or the login node using large number of cores.**
+This section is only for debugging purposes. **Do not run mapping on the local server or the login node using a large number of cores.**
 {% endhint %}
 
 ## Run snakemake directly
 
 In each of the sub-directory, you can directly run snakemake to map or **dry-run** the mapping.
 
-All mapping commands are depend on each other, **the last command can visualize the command dependency graph for this sub-dir. An example `dag.svg` is attached below.**
+All mapping commands are depent on each other, **the last command can visualize the command dependency graph for this sub-dir. An example `dag.svg` is attached below.**
 
 ```text
 # go to a certain sub-dir that has the Snakefile

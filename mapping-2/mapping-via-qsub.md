@@ -81,7 +81,7 @@ qsub qsub.sh
 
 **The hallmark of successful snakemake execution is the existence of a `MappingSummary.csv.gz` in that sub-directory.** Because this file is the final target of snakemake. This file will only occur when all the previous mapping commands are executed successfully.
 
-Except for this summary file, you will also see the actual data files \(ALLC, BAM, etc.\) organized in sub-directories. Different technology has different output. For example, this is the directory structure of snmC-seq3 with V2 barcoding, the minimum example files are also attached:
+Except for this summary file, you will also see the actual data files \(ALLC, BAM, etc.\) organized in sub-directories. Different technology has a different output. For example, this is the directory structure of snmC-seq3 with V2 barcoding, the minimum example files are also attached:
 
 ```text
 output_dir
