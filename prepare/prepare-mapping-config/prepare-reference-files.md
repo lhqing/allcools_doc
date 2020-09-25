@@ -12,11 +12,11 @@ Another thing is the lambda DNA spike-in as a non-conversion estimation \(we do 
 
 Use bismark to prepare genome index, see its documentation [here](https://rawgit.com/FelixKrueger/Bismark/master/Docs/Bismark_User_Guide.html#i-running-bismark-genome-preparation). Note that we use bowtie2 for snmC-seq and snmCT-seq \(that's bismark's default also\), but use bowtie1 for snm3C-seq \([the same as snm3C-seq paper](https://www.nature.com/articles/s41592-019-0547-z)\).
 
-## Gene Annotation GTF \(mct\)
+## Gene Annotation GTF \(mct only\)
 
 For human and mouse, we usually use [GENCODE's latest version](https://www.gencodegenes.org/). But I do not update GTF throughout the same project. \(And the difference between versions has little impact on your analysis results.\)
 
-## STAR Reference \(mct\)
+## STAR Reference \(mct only\)
 
 Use STAR to prepare its genome index, see its documentation [here](https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf).
 

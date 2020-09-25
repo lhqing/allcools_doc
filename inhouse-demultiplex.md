@@ -9,11 +9,11 @@ yap demultiplex
 
 ## Purpose
 
-The `bcl2fastq` command only demultiplexed the **PCR index**. **Therefore, each set of the raw FASTQ files still contain reads from several cells \(8 cells in V1; 64 cells in V2\).** This step further demultiplex **random index** on the 5' of R1, generating cell-level R1 and R2 FASTQ files.
+The `bcl2fastq` command only demultiplexed the **PCR index**. ****Therefore, each set of the raw FASTQ files still contain reads from several cells \(8 cells in V1; 64 cells in V2\). This step further demultiplex **random index** on the 5' of R1, generating cell-level R1 and R2 FASTQ files.
 
-**Random index is trimmed after demultiplex. The random index name occur at the FASTQ file name, which combine with previous information to form the cell id.**
+**Random index is trimmed after demultiplex.** The random index name occur at the FASTQ file name, which combine with previous information to form the cell id.
 
-**This step also prepares command for run mapping \(using** [**snakemake**](https://snakemake.readthedocs.io/en/stable/)**\).**
+**This step also prepares Snakefiles that contain all the commands for mapping \(using** [**snakemake**](https://snakemake.readthedocs.io/en/stable/)**\).**
 
 ## Input
 
@@ -51,7 +51,7 @@ Required inputs:
 {% hint style="info" %}
 * It took several minutes to demultiplex MiSeq files, several hours to demultiplex NovaSeq FASTQ files \(~100GB / h with 16 cores\). 
 * This command creates lots of files simultaneously, in order to prevent too much burden on the file system, I set max CPU = 16
-* Remember to use "" to quote the fastq pattern like this, other wise the wildcard will be expanded in shell and cause error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
+* Remember to use "" to quote the fastq pattern like this, otherwise the wildcard will be expanded in shell and cause error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
 * An error will occur if `output_dir`already exists.
 {% endhint %}
 
@@ -67,7 +67,7 @@ Required inputs:
 * Each cell will have two FASTQ files in the output directory, with a fixed name pattern:
   * `{cell_id}-R1.fq.gz` for R1
   * `{cell_id}-R2.fq.gz` for R2
-* Files are organized by the following structure**, a minimum example is also attached bellow.**
+* Files are organized by the following structure**, a minimum example is also attached below.**
 
 ```text
 output_dir

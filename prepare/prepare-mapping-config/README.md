@@ -62,7 +62,7 @@ optional arguments:
 Review and modify the MappingConfig template as you need, each parameter is explained within the template.
 
 {% hint style="warning" %}
-Remember the gale and stampede2 needs different MappingConfig \(different reference path\).
+Remember different server needs different MappingConfig \(different reference path\).
 {% endhint %}
 
 ## Output
