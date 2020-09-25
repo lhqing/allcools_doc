@@ -11,7 +11,7 @@ yap demultiplex
 
 The `bcl2fastq` command only demultiplexed the **PCR index**. ****Therefore, each set of the raw FASTQ files still contain reads from several cells \(8 cells in V1; 64 cells in V2\). This step further demultiplex **random index** on the 5' of R1, generating cell-level R1 and R2 FASTQ files.
 
-**Random index is trimmed after demultiplex.** The random index name occur at the FASTQ file name, which combine with previous information to form the cell id.
+**The random index is trimmed after demultiplex.** The random index name occurs at the FASTQ file name, which combines with previous information to form the cell id.
 
 **This step also prepares Snakefiles that contain all the commands for mapping \(using** [**snakemake**](https://snakemake.readthedocs.io/en/stable/)**\).**
 
@@ -51,12 +51,12 @@ Required inputs:
 {% hint style="info" %}
 * It took several minutes to demultiplex MiSeq files, several hours to demultiplex NovaSeq FASTQ files \(~100GB / h with 16 cores\). 
 * This command creates lots of files simultaneously, in order to prevent too much burden on the file system, I set max CPU = 16
-* Remember to use "" to quote the fastq pattern like this, otherwise the wildcard will be expanded in shell and cause error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
-* An error will occur if `output_dir`already exists.
+* Remember to use "..." to quote the fastq pattern like this, otherwise, the wildcard will be expanded in theshell and cause an error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
+* An error will occur if the`output_dir`already exists.
 {% endhint %}
 
 {% hint style="danger" %}
-**For Ecker Lab users**, do not run this step on DDN drive, `cutadapt demultiplex` \(what `yap` is based on\) constantly raise error on DDN drive. More safely, do not run mapping on DDN drive.
+**For Ecker Lab users**, do not run this step on DDN drive, `cutadapt demultiplex` \(what `yap` is based on\) constantly raise errors on DDN drive. More safely, do not run mapping on DDN drive.
 {% endhint %}
 
 ## Output

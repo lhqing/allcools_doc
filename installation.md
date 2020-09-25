@@ -18,9 +18,9 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-### Create mapping environment and install required packages
+### Create a mapping environment and install required packages
 
-This command will create a conda environment called "mapping" and install all required packages for you. The `mapping_env.yaml` file contains the detail about the environment, you can download that file below.
+This command will create a conda environment called "mapping" and install all required packages for you. The `mapping_env.yaml` contains the detail about the environment, you can download that file below.
 
 ```text
 # conda is a bit slow, this step will take ~30 min in my server, 
@@ -31,7 +31,7 @@ conda env create -f mapping_env.yaml
 {% file src=".gitbook/assets/mapping\_env.yaml" caption="mapping\_env.yaml" %}
 
 {% hint style="info" %}
-[Why using conda environment?](other/faq.md#why-using-conda-environment)
+[Why using a conda environment?](other/faq.md#why-using-conda-environment)
 {% endhint %}
 
 ### Activate the mapping environment

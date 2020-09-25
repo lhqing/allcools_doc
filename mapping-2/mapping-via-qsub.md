@@ -1,7 +1,7 @@
 # Mapping Via Qsub
 
 {% hint style="warning" %}
-Content on this page only related to the Ecker Lab servers. But the same idea can be apply to any other servers with some modification.
+Content on this page only related to the Ecker Lab servers. But the same idea can be applied to any other servers with some modification.
 {% endhint %}
 
 {% hint style="info" %}
@@ -10,7 +10,7 @@ Content on this page only related to the Ecker Lab servers. But the same idea ca
 
 ## Input
 
-After demultiplex, all the snakemake command is also summarized in the `{output_dir}/snakemake/qsub` directory. 
+After demultiplexing, all the snakemake command is also summarized in the `{output_dir}/snakemake/qsub` directory. 
 
 The `snakemake_cmd.txt` contains all the snakemake command for all PCR index sub-directories. 
 
