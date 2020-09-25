@@ -6,9 +6,9 @@
 
 ## Cell batches and snakemake
 
-During demultiplex, cells are divided into small batches based on their PCR index. FASTQ files of each batch are saved together in sub-directory of the `{output_dir}` . Each of the sub-directory is mapped together in a single job, all the steps need to be done are written in the `{output_dir}/{sub_dir}/Snakefile` , a file needed by [snakemake](https://snakemake.github.io/). 
+During demultiplex, cells are divided into small batches based on their PCR index. FASTQ files of each batch are saved together in sub-directory of the `{output_dir}` . Each of the sub-directory is mapped together in a single job, all the steps need to be done are written in the `{output_dir}/{sub_dir}/Snakefile` , a file needed by [snakemake](https://snakemake.github.io/) and contain all the commands to map the files in this sub-directory. 
 
-The single command used to execute the Snakefile \(and map all the cells in that sub-directory\):
+Here is a single command used to execute the Snakefile, but you don't need to do this by yourself \(see below\):
 
 ```text
 # to map cells in a single sub directory
@@ -25,7 +25,7 @@ snakemake \
 
 ## Execute snakemake commands
 
-In the `{output_dir}/snakemake` , you should be able to find a list of snakemake commands like the above, one command for each PCR index sub-directory. You have three ways to execute these commands and map the files.
+In the `{output_dir}/snakemake` , you should be able to find a list of snakemake commands like the above, one command for each PCR index sub-directory. You have three ways to execute these commands.
 
 ### For MiSeq
 

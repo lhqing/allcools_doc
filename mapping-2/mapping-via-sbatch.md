@@ -60,7 +60,7 @@ rsync -arv {output_dir} tacc:scratch/
 
 ## Execute
 
-Just like qsub, you only need to execute the sbatch.sh. It will generate all the sbatch script for each snakemake command and execute them. And it will also wait for all command to finish before exit. I do not recommend running this as a separate sbatch job, because the execution time could be long. You can just execute this in screen or `nohup`
+Just like qsub, you only need to execute the sbatch.sh. It will generate all the sbatch script for each snakemake command and execute them. And it will also wait for all command to finish before exit. I do not recommend run this as a separate sbatch job, because the execution time could be long. You can just execute this in a screen or `nohup`
 
 ```text
 # open a screen
@@ -79,7 +79,7 @@ The output files are the same as [qsub output files](mapping-via-qsub.md#output)
 
 ## Transfer Files Back
 
-After mapping, you can `rsync` the whole `output_dir` from the remove server back to the same location, while skip all the FASTQ files \(because they are unchanged\).
+After mapping, you can `rsync` the whole `output_dir` from the remote server back to the same location, while skip all the FASTQ files \(because they are unchanged\).
 
 ```text
 # the {output_dir} is the same dir uploaded to tacc

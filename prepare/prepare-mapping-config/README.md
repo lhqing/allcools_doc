@@ -1,3 +1,9 @@
+---
+description: >-
+  Prepare a config file that contains all parameters and path to the genome
+  reference
+---
+
 # Prepare Mapping Config
 
 ## Related Commands

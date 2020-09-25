@@ -29,11 +29,11 @@
   * [Mapping Via Qsub](mapping-2/mapping-via-qsub.md)
   * [Mapping Via Sbatch](mapping-2/mapping-via-sbatch.md)
   * [Mapping Locally](mapping-2/trouble-shooting.md)
-  * [🚧 Mapping Form Cell-Level FASTQ Files](mapping-2/mapping-form-cell-level-fastq-files.md)
 * [🚧 Summary](mapping-summary-and-metrics/README.md)
   * [Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
   * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
 * [🚧 A Full Example](example.md)
+* [🚧 Mapping Form Cell-Level FASTQ Files](mapping-form-cell-level-fastq-files.md)
 
 ## Other
 
