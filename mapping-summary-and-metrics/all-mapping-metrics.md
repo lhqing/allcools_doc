@@ -118,91 +118,177 @@ Calculated by `R2TrimmedReads / R2InputReads`.
 
 #### R1UniqueMappedReads
 
+Number of unique mapped R1 reported by bismark.
+
 #### R1MappingRate
+
+R1 mapping rate reported by bismark.
 
 #### R1UnmappedReads
 
+Number of unmapped R1 reported by bismark.
+
 #### R1UnuniqueMappedReads
+
+Number of ununique mapped R1 reported by bismark.
 
 #### R1OT
 
+Number of R1 mapped to Original Top strand reported by bismark.
+
 #### R1OB
+
+Number of R1 mapped to Original Bottom strand reported by bismark.
 
 #### R1CTOT
 
+Number of R1 that are ComplemenTary to the Original Top strand reported by bismark.
+
 #### R1CTOB
+
+Number of R1 that are ComplemenTary to the Original Bottom strand reported by bismark.
 
 #### R1TotalC
 
+Number of total Cytosine beed covered in R1 reported by bismark.
+
 #### R1TotalmCGRate
+
+mCG fraction in R1 reported by bismark.
 
 #### R1TotalmCHGRate
 
+mCHG fraction in R1 reported by bismark.
+
 #### R1TotalmCHHRate
+
+mCHH fraction in R1 reported by bismark.
 
 #### R2UniqueMappedReads
 
+Number of unique mapped R2 reported by bismark.
+
 #### R2MappingRate
+
+R2 mapping rate reported by bismark.
 
 #### R2UnmappedReads
 
+Number of unmapped R2 reported by bismark.
+
 #### R2UnuniqueMappedReads
+
+Number of ununique mapped R2 reported by bismark.
 
 #### R2OT
 
+Number of R2 mapped to Original Top strand reported by bismark.
+
 #### R2OB
+
+Number of R2 mapped to Original Bottom strand reported by bismark.
 
 #### R2CTOT
 
+Number of R2 that are ComplemenTary to the Original Top strand reported by bismark.
+
 #### R2CTOB
+
+Number of R2 that are ComplemenTary to the Original Bottom strand reported by bismark.
 
 #### R2TotalC
 
+Number of total Cytosine beed covered in R2 reported by bismark.
+
 #### R2TotalmCGRate
+
+mCG fraction in R2 reported by bismark.
 
 #### R2TotalmCHGRate
 
+mCHG fraction in R2 reported by bismark.
+
 #### R2TotalmCHHRate
+
+mCHH fraction in R2 reported by bismark.
 
 ### Filtered BAM
 
 #### R1MAPQFilteredReads
 
+Number of R1 after filtering by MAPQ.
+
 #### R1DuplicatedReads
+
+Number of R1 that are marked as PCR duplicates.
 
 #### R1DuplicationRate
 
+Calculated as `R1DuplicatedReads / R1MAPQFilteredReads`.
+
 #### R1FinalBismarkReads
+
+Final number of R1 used in generate ALLC file. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`.
 
 #### R2MAPQFilteredReads
 
+Number of R1 after filtering by MAPQ.
+
 #### R2DuplicatedReads
+
+Number of R1 that are marked as PCR duplicates.
 
 #### R2DuplicationRate
 
+Calculated as `R2DuplicatedReads / R2MAPQFilteredReads`.
+
 #### R2FinalBismarkReads
 
+Final number of R2 used in generate ALLC file. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`.
+
 #### FinalmCReads
+
+Final number of total reads \(R1 + R2\) used in generate ALLC file. Calculated as `R1FinalBismarkReads + R2FinalBismarkReads`.
 
 ## ALLC Metrics
 
 #### mCHmC
 
+Total methylated cytosine in the CH context.
+
 #### mCHCov
+
+Total covered cytosine in the CH context.
 
 #### mCHFrac
 
+Calculated as `mCHmC / mCHCov`
+
 #### mCGmC
+
+Total methylated cytosine in the CG context.
 
 #### mCGCov
 
+Total covered cytosine in the CG context.
+
 #### mCGFrac
+
+Calculated as `mCGmC / mCGCov`
 
 #### mCCCmC
 
+Total methylated cytosine in the CCC context.
+
 #### mCCCCov
+
+Total covered cytosine in the CCC context.
 
 #### mCCCFrac
 
+Calculated as `mCCCmC / mCCCCov`
+
 #### GenomeCov
+
+Percentage of cytosine in the genome that been covered by at least one read.
 
