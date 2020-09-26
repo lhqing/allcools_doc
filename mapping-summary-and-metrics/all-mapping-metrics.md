@@ -6,143 +6,203 @@ description: All mapping metrics from the mapping pipeline
 
 ## Cell ID
 
-The first column \(row index\) of the mapping summary file is the cell id. The cell id pattern for V1 and V2 barcoding is different.
+The first column \(row index\) of the mapping summary file is the cell ID. The cell ID pattern for [V1 barcoding](../tech-background/barcoding.md#version-1-v-1-before-spring-2020) and [V2 barcoding](../tech-background/barcoding.md#version-2-v-2-spring-2020-to-now) is different.
 
-V1 Cell ID: 
+#### V1 cell ID 
+
+`{Plate1}-{Plate2}-{PCRIndex}-{RandomIndex}`, the Plate1 and Plate2 are two plates that multiplexed together by the eight random indexes. The Plate column \(see below\) is the actual plate that the cell comes from.
+
+#### V2 cell ID 
+
+`{Plate}-{MultiplexGroup}-{PCRIndex}-{RandomIndex}`. 
 
 ## Plate and Barcode Information
 
-#### **Plate**: 
+#### Plate
 
-The plate ID provided from PlateInfo 
+The 384-plate ID. Information from the in PlateInfo file.
 
-**PCRIndex**:
+#### PCRIndex
 
-**MultiplexGroup**:
+The PCR index name. Information from the in PlateInfo file.
 
-**RandomIndex**:
+#### MultiplexGroup （V2 barcoding only）
 
-**Col384**:
+The multiplex group number, a int from 1 to 6. Information from the in PlateInfo file.
 
-**Row384**:
+#### RandomIndex
 
-## FASTQ Metric
+The random index name. Assigned during `yap demultiplex`.
 
-**R1InputReads**:
+#### Col384
 
-**R1InputReadsBP**:
+The original column in the 384-plate.
 
-**R1WithAdapters**:
+#### Row384
 
-**R1QualTrimBP**:
+The original row in the 384-plate.
 
-**R1TrimmedReads**:
+## FASTQ Metrics
 
-**R1TrimmedReadsBP**:
+### Raw FASTQ
 
-**R1TrimmedReadsRate**:
+#### R1InputReads
 
-**R1UniqueMappedReads**:
+Total number of R1 generated from `yap demultiplex`. This equals to `CellInputReadPairs` and `R2InputReads`.
 
-**R1MappingRate**:
+#### R1InputReadsBP
 
-**R1UnmappedReads**:
+Total number of R1 base pairs generated from `yap demultiplex`.
 
-**R1UnuniqueMappedReads**:
+#### R2InputReads
 
-**R1OT**:
+Total number of R2 generated from `yap demultiplex`. This equals to `CellInputReadPairs` and `R1InputReads`.
 
-**R1OB**:
+#### R2InputReadsBP
 
-**R1CTOT**:
+Total number of R2 base pairs generated from `yap demultiplex`.
 
-**R1CTOB**:
+#### CellInputReadPairs
 
-**R1TotalC**:
+Total number of read pairs generated from `yap demultiplex`. This equals to `R1InputReads` and `R2InputReads`.
 
-**R1TotalmCGRate**:
+#### CellBarcodeRatio
 
-**R1TotalmCHGRate**:
+Calculated by `CellInputReadPairs / sum(CellInputReadPairs of the same multiplex group)` .
 
-**R1TotalmCHHRate**:
+### Trimmed FASTQ
 
-**R1MAPQFilteredReads**:
+#### R1WithAdapters
 
-**R1DuplicatedReads**:
+Number of R1 trimmed due to having illumina adapter.
 
-**R1DuplicationRate**:
+#### R1QualTrimBP
 
-**R1FinalBismarkReads**:
+Number of R1 base pairs trimmed due to low base quality.
 
-**R2InputReads**:
+#### R1TrimmedReads
 
-**R2InputReadsBP**:
+Number of R1 **remained** after adapter and quality trimming.
 
-**R2WithAdapters**:
+#### R1TrimmedReadsBP
 
-**R2QualTrimBP**:
+Number of R1 base pairs **remained** after adapter and quality trimming.
 
-**R2TrimmedReads**:
+#### R1TrimmedReadsRate
 
-**R2TrimmedReadsBP**:
+Calculated by `R1TrimmedReads / R1InputReads`.
 
-**R2TrimmedReadsRate**:
+#### R2WithAdapters
 
-**R2UniqueMappedReads**:
+Number of R2 trimmed due to having illumina adapter. 
 
-**R2MappingRate**:
+#### R2QualTrimBP
 
-**R2UnmappedReads**:
+Number of R2 base pairs trimmed due to low base quality.
 
-**R2UnuniqueMappedReads**:
+#### R2TrimmedReads
 
-**R2OT**:
+Number of R2 **remained** after adapter and quality trimming.
 
-**R2OB**:
+#### R2TrimmedReadsBP
 
-**R2CTOT**:
+Number of R2 base pairs **remained** after adapter and quality trimming.
 
-**R2CTOB**:
+#### R2TrimmedReadsRate
 
-**R2TotalC**:
+Calculated by `R2TrimmedReads / R2InputReads`.
 
-**R2TotalmCGRate**:
+## BAM Metrics
 
-**R2TotalmCHGRate**:
+### Bismark Mapped BAM
 
-**R2TotalmCHHRate**:
+#### R1UniqueMappedReads
 
-**R2MAPQFilteredReads**:
+#### R1MappingRate
 
-**R2DuplicatedReads**:
+#### R1UnmappedReads
 
-**R2DuplicationRate**:
+#### R1UnuniqueMappedReads
 
-**R2FinalBismarkReads**:
+#### R1OT
 
-**mCHmC**:
+#### R1OB
 
-**mCHCov**:
+#### R1CTOT
 
-**mCHFrac**:
+#### R1CTOB
 
-**mCGmC**:
+#### R1TotalC
 
-**mCGCov**:
+#### R1TotalmCGRate
 
-**mCGFrac**:
+#### R1TotalmCHGRate
 
-**mCCCmC**:
+#### R1TotalmCHHRate
 
-**mCCCCov**:
+#### R2UniqueMappedReads
 
-**mCCCFrac**:
+#### R2MappingRate
 
-**GenomeCov**:
+#### R2UnmappedReads
 
-**CellInputReadPairs**:
+#### R2UnuniqueMappedReads
 
-**CellBarcodeRatio**:
+#### R2OT
 
-**FinalmCReads**:
+#### R2OB
+
+#### R2CTOT
+
+#### R2CTOB
+
+#### R2TotalC
+
+#### R2TotalmCGRate
+
+#### R2TotalmCHGRate
+
+#### R2TotalmCHHRate
+
+### Filtered BAM
+
+#### R1MAPQFilteredReads
+
+#### R1DuplicatedReads
+
+#### R1DuplicationRate
+
+#### R1FinalBismarkReads
+
+#### R2MAPQFilteredReads
+
+#### R2DuplicatedReads
+
+#### R2DuplicationRate
+
+#### R2FinalBismarkReads
+
+#### FinalmCReads
+
+## ALLC Metrics
+
+#### mCHmC
+
+#### mCHCov
+
+#### mCHFrac
+
+#### mCGmC
+
+#### mCGCov
+
+#### mCGFrac
+
+#### mCCCmC
+
+#### mCCCCov
+
+#### mCCCFrac
+
+#### GenomeCov
 
