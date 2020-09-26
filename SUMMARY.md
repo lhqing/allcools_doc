@@ -6,10 +6,7 @@
 ## TECH BACKGROUND
 
 * [Barcoding](tech-background/barcoding.md)
-* [🚧 snmC-seq2 & 3](tech-background/snmc-seq.md)
-* [🚧 snmCT-seq](tech-background/snmct-seq.md)
-* [🚧 snm3C-seq](tech-background/snm3c-seq.md)
-* [🚧 NOMe treatment](tech-background/nome-treatment.md)
+* [Technology References](tech-background/snmc-seq.md)
 
 ## Data formats
 
@@ -29,11 +26,10 @@
   * [Mapping Via Qsub](mapping-2/mapping-via-qsub.md)
   * [Mapping Via Sbatch](mapping-2/mapping-via-sbatch.md)
   * [Mapping Locally](mapping-2/trouble-shooting.md)
-* [🚧 Summary](mapping-summary-and-metrics/README.md)
-  * [Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
-  * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
-* [🚧 A Full Example](example.md)
 * [🚧 Mapping Form Cell-Level FASTQ Files](mapping-form-cell-level-fastq-files.md)
+* [Summary](mapping-summary-and-metrics/README.md)
+  * [🚧 Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
+  * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
 
 ## Other
 

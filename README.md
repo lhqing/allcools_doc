@@ -21,9 +21,9 @@ YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for sev
 ## Technologies Supported
 
 * [snmC-seq2 & 3](tech-background/snmc-seq.md): DNA methylome
-* [snmCT-seq](tech-background/snmct-seq.md): DNA methylome + Transcriptome
-* [snm3C-seq](tech-background/snm3c-seq.md): DNA methylome + Chromatin Contact
-* [NOMe treated](tech-background/nome-treatment.md): X + Chromatin Accessibility
+* [snmCT-seq](): DNA methylome + Transcriptome
+* [snm3C-seq](): DNA methylome + Chromatin Contact
+* [NOMe treated](): X + Chromatin Accessibility
 
 ## How to use it?
 

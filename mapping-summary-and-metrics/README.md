@@ -1,4 +1,4 @@
-# 🚧 Summary
+# Summary
 
 ## Input
 
@@ -40,7 +40,10 @@ In the mapping summary table, I provide dozens of metrics \(as much as I can\) f
 ## Output
 
 1. Mapping summary table at `{output_dir}/stats/MappingSummary.csv.gz`
-2. Jupyter notebook and HTML file of some visualization of the mapping metrics, also located in the same directory.
+2. Jupyter notebook and HTML file of some visualization of the mapping metrics, also located in the same directory. The plate view use cell's original 384-plate position as coordinates and color code mapping metrics.
+3. See detail annotation of mapping metrics in the following pages.
+
+![Plate view of mapping metrics](../.gitbook/assets/download.png)
 
 
 

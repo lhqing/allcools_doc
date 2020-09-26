@@ -132,6 +132,14 @@ Number of unmapped R1 reported by bismark.
 
 Number of ununique mapped R1 reported by bismark.
 
+#### R1UnuniqueMappedReads \(m3C specific\)
+
+Number of R1 that has unique read name \(to prevent recount split reads\) in MAPQ filtered BAM file.
+
+#### R1MappingRate \(m3C specific\)
+
+R1 mapping rate calculated by `R1UnuniqueMappedReads / R1TrimmedReads * 100` .
+
 #### R1OT
 
 Number of R1 mapped to Original Top strand reported by bismark.
@@ -167,6 +175,14 @@ mCHH fraction in R1 reported by bismark.
 #### R2UniqueMappedReads
 
 Number of unique mapped R2 reported by bismark.
+
+#### R2UnuniqueMappedReads \(m3C specific\)
+
+Number of R2 that has unique read name \(to prevent recount split reads\) in MAPQ filtered BAM file.
+
+#### R2MappingRate \(m3C specific\)
+
+R2 mapping rate calculated by `R1UnuniqueMappedReads / R1TrimmedReads * 100` .
 
 #### R2MappingRate
 
@@ -222,13 +238,21 @@ Number of R1 after filtering by MAPQ.
 
 Number of R1 that are marked as PCR duplicates.
 
+#### R1DeduppedReads \(m3C specific\)
+
+Number of R1 **remained** after removing PCR duplicates. Counted reads that have unique read name \(to prevent recount split reads\) from dedupplicate BAM file.
+
 #### R1DuplicationRate
 
 Calculated as `R1DuplicatedReads / R1MAPQFilteredReads`.
 
+#### R1DuplicationRate \(m3C specific\)
+
+Calculated as `(1 - R1DeduppedReads(m3c) / R1UniqueMappedReads(m3c)) * 100` .
+
 #### R1FinalBismarkReads
 
-Final number of R1 used in generate ALLC file. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`.
+Final number of R1 used in generating ALLC file in mC mode. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`. In mCT mode, reads are further filtered by mC fraction \(see [FinalDNAReads](all-mapping-metrics.md#finaldnareads).\)
 
 #### R2MAPQFilteredReads
 
@@ -238,17 +262,29 @@ Number of R1 after filtering by MAPQ.
 
 Number of R1 that are marked as PCR duplicates.
 
+#### R2DeduppedReads \(m3C specific\)
+
+Number of R2 **remained** after removing PCR duplicates. Counted reads that have unique read name \(to prevent recount split reads\) from dedupplicate BAM file.
+
 #### R2DuplicationRate
 
 Calculated as `R2DuplicatedReads / R2MAPQFilteredReads`.
 
+#### R2DuplicationRate \(m3C specific\)
+
+Calculated as `(1 - R2DeduppedReads(m3c) / R2UniqueMappedReads(m3c)) * 100` .
+
 #### R2FinalBismarkReads
 
-Final number of R2 used in generate ALLC file. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`.
+Final number of R2 used in generate ALLC file in mC mode. Calculated as `R2MAPQFilteredReads - R2DuplicatedReads`. In mCT mode, reads are further filtered by mC fraction \(see [FinalDNAReads](all-mapping-metrics.md#finaldnareads).\)
 
 #### FinalmCReads
 
-Final number of total reads \(R1 + R2\) used in generate ALLC file. Calculated as `R1FinalBismarkReads + R2FinalBismarkReads`.
+Final number of total reads \(R1 + R2\) used in generating ALLC file. Calculated as `R1FinalBismarkReads + R2FinalBismarkReads`.
+
+#### FinalmCReads \(m3C specific\)
+
+Final number of total reads \(R1 + R2\) that has unique read name \(to prevent recount split reads\). Counted as `R1DeduppedReads (m3c) + R2DeduppedReads (m3c)` .
 
 ## ALLC Metrics
 
@@ -291,4 +327,66 @@ Calculated as `mCCCmC / mCCCCov`
 #### GenomeCov
 
 Percentage of cytosine in the genome that been covered by at least one read.
+
+## DNA and RNA Reads Separation \(mCT specific\)
+
+#### FinalDNAReads
+
+Number of final DNA reads that passed read-level mC fraction filtering. These reads were used in generating ALLC file.
+
+#### SelectedDNAReadsRatio
+
+Calculated as `FinalDNAReads / FinalmCReads`.
+
+#### RNAUniqueMappedReads
+
+Number of reads uniquely mapped by STAR.
+
+#### FinalRNAReads
+
+Number of RNA reads \(assigned to gene\) counted by featureCount
+
+#### FinalCountedReads
+
+Number of reads counted by featureCount.
+
+#### SelectedRNAReadsRatio
+
+Calculated as `FinalRNAReads / RNAUniqueMappedReads`
+
+#### GenesDetected
+
+Number of genes that covered by at least one read.
+
+## Chromatin Contact \(m3C specific\)
+
+#### CisShortContact 
+
+Number of contact whose two ends are from the same chromosome and closer than min\_gap parameter in the MappingConfig.
+
+#### CisLongContact
+
+Number of contact whose two ends are from the same chromosome and further than min\_gap parameter in the MappingConfig.
+
+#### TransContact
+
+Number of contact whose two ends are from different chromosome.
+
+#### TotalContacts
+
+Calculated as `CisShortContact + CisLongContact + TransContact` .
+
+#### CisShortRatio
+
+Calculated as `CisShortContact / TotalContacts` .
+
+#### CisLongRatio
+
+Calculated as `CisLongContact / TotalContacts` .
+
+#### TransRatio
+
+Calculated as `TransContact / TotalContacts` .
+
+
 
