@@ -6,7 +6,7 @@
 ## TECH BACKGROUND
 
 * [Barcoding](tech-background/barcoding.md)
-* [Technology References](tech-background/snmc-seq.md)
+* [Technology References](tech-background/tech-ref.md)
 
 ## Data formats
 
