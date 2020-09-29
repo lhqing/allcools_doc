@@ -28,6 +28,38 @@ This command will create a conda environment called "mapping" and install all re
 conda env create -f mapping_env.yaml
 ```
 
+### Content of mapping\_env.yaml file
+
+```text
+name: mapping
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - jupyter
+  - jupyter_contrib_nbextensions
+  - cutadapt=2.10
+  - snakemake=5.17
+  - bismark=0.20
+  - picard
+  - bedtools=2.29
+  - star=2.7.3a
+  - subread=2.0
+  - bowtie2=2.3
+  - bowtie=1.3
+  - htslib=1.9
+  - pysam=0.15
+  - pytables
+  - seaborn
+  - matplotlib
+  - pip:
+    - papermill
+
+```
+
 {% file src=".gitbook/assets/mapping\_env.yaml" caption="mapping\_env.yaml" %}
 
 {% hint style="info" %}
