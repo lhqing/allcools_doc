@@ -7,11 +7,7 @@
 
 * [Barcoding](tech-background/barcoding.md)
 * [Technology References](tech-background/tech-ref.md)
-
-## Data formats
-
-* [🚧 ALLC](data-formats/allc.md)
-* [🚧 MCDS](data-formats/mcds.md)
+* [File Formats](tech-background/file-formats.md)
 
 ## Mapping Pipeline <a id="mapping"></a>
 
@@ -30,7 +26,7 @@
 * [Summary](mapping-summary-and-metrics/README.md)
   * [🚧 Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
   * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
-* [🚧 Generate MCDS](generate-mcds.md)
+* [Generate MCDS](generate-mcds.md)
 
 ## Other
 
