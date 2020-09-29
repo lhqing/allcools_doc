@@ -106,8 +106,12 @@ allcools generate-mcds \
 --region_bed_paths gene_body.bed.gz \  # MCDS will generate separate array counting regions in each of the bed file(s) 
 --region_bed_names gene \  # name of the bed file(s)
 --cov_cutoff 2 \  # for single cell ALLC, skip rows having > 2 cov
---cpu 40 \  # mcds can run in parallel
+--cpu 20 \  # mcds can run in parallel
 ```
+
+### Run time and memory
+
+The speed and memory usage of MCDS depends on the number of cells and number of features used. In the above example, the speed is about 20 cells / CPU / Hour, usually for a 3000 cell library, it finished in several hours. The MCDS generation is memory intensive, it's probably safe to give each CPU 5 GB memory, and no less than 40 GB in total. 
 
 ## Output
 
