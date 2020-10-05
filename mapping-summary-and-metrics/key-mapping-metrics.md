@@ -20,9 +20,9 @@ Below is the minimum mapping metric I used to evaluate cell and library quality 
 * R1\(R2\)DuplicationRate, the library average usually between 25% - 35%. I do not filter cells based on this metric. 
 * Overall success rate: after filtering by FinalmCReads, mCCCFrac, R1MappingRate, we usually got ~80% wells \(or cells\) remaining. The success rate between MiSeq and NovaSeq should be very close. **If the MiSeq success rate is below 65% \(&lt; 2000 success in a total of 3072\), I do not recommend proceeding to NovaSeq.** There must be some quality issues either during FACS or due to the library preparation.
 
-## snmCT-seq
+## 🚧 snmCT-seq
 
-## snm3C-seq
+## 🚧 snm3C-seq
 
 
 
