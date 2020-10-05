@@ -2,7 +2,7 @@
 
 We use two barcoding strategies to do cell barcoding for all the technologies we developed. The first version \(V1\) used in all the data generated before Summer 2020. After that, in most projects, we switched to the second version \(V2\) which has a larger barcoding capacity. 
 
-All the sequences of barcodes are predefined, we can use that to trace the exact well in the plate, as you will see [in the mapping summary section](../mapping-summary-and-metrics/).
+All the sequences of barcodes are predefined, we can use that to trace the exact well in the plate, as you will see [in the mapping summary section](../mapping-summary-and-metrics.md).
 
 ## Two round of barcoding
 
