@@ -1,6 +1,6 @@
 # Technology References
 
-Details and protocols of the technologies supported by YAP were described in our papers. Please find corresponding references below.
+Details and protocols of the technologies supported by YAP were described in our papers. Please find the corresponding references below.
 
 ## snmC-seq2 / 3
 
@@ -26,7 +26,7 @@ The snm3C-seq paper
 
 [Lee, Dong-Sung, Chongyuan Luo, Jingtian Zhou, Sahaana Chandran, Angeline Rivkin, Anna Bartlett, Joseph R. Nery, et al. 2019. “Simultaneous Profiling of 3D Genome Structure and DNA Methylation in Single Human Cells.” Nature Methods 16 \(10\): 999–1006.](http://dx.doi.org/10.1038/s41592-019-0547-z)
 
-Another method developed in Ren Lab called Methyl-HiC that also profile mC and chromatin contact in the same cell
+Another method developed in Ren Lab called Methyl-HiC that also profiles mC and chromatin contacts in the same cell
 
 [Li, Guoqiang, Yaping Liu, Yanxiao Zhang, Naoki Kubo, Miao Yu, Rongxin Fang, Manolis Kellis, and Bing Ren. 2019. “Joint Profiling of DNA Methylation and Chromatin Architecture in Single Cells.” Nature Methods 16 \(10\): 991–93.](http://dx.doi.org/10.1038/s41592-019-0502-z)
 

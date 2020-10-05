@@ -24,7 +24,7 @@
   * [Mapping Locally](mapping-2/trouble-shooting.md)
 * [🚧 Mapping Form Cell-Level FASTQ Files](mapping-form-cell-level-fastq-files.md)
 * [Summary](mapping-summary-and-metrics/README.md)
-  * [🚧 Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
+  * [Key Mapping Metrics](mapping-summary-and-metrics/key-mapping-metrics.md)
   * [All Mapping Metrics](mapping-summary-and-metrics/all-mapping-metrics.md)
 * [Generate MCDS](generate-mcds.md)
 
