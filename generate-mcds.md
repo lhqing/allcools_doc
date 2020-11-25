@@ -111,9 +111,9 @@ allcools generate-mcds \
 
 ### Run time and memory
 
-The speed and memory usage of MCDS depends on the number of cells and number of features used. In the above example, the speed is about 20 cells / CPU / Hour, usually for a 3000 cell library, it finished in several hours. The MCDS generation is memory intensive, it's probably safe to give each CPU 5 GB memory, and no less than 40 GB in total. 
+The speed and memory usage of MCDS depends on the number of cells and the number of features used. In the above example, the speed is about 20 cells / CPU / Hour. Usually, for a 3000 cell library, it finished in several hours. The MCDS generation is memory intensive, it's probably safe to give each CPU 5 GB memory, and no less than 40 GB in total. 
 
 ## Output
 
-A single netCDF4 based MCDS file, contain all the cell-by-feature raw count arrays. If you provide multiple feature set \(e.g., both genomic bins and gene body\), they will all be saved in this MCDS file, while you can easily select them using ALLCools and/or xarray.
+A single netCDF4 based MCDS file contains all the cell-by-feature raw count arrays. If you provide multiple feature sets \(e.g., both genomic bins and gene body\), they will all be saved in this MCDS file, while you can easily select them using ALLCools and/or xarray.
 

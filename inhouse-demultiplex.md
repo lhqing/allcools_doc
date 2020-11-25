@@ -50,8 +50,8 @@ Required inputs:
 
 {% hint style="info" %}
 * It took several minutes to demultiplex MiSeq files, several hours to demultiplex NovaSeq FASTQ files \(~100GB / h with 16 cores\). 
-* This command creates lots of files simultaneously, in order to prevent too much burden on the file system, I set max CPU = 16
-* Remember to use "..." to quote the fastq pattern like this, otherwise, the wildcard will be expanded in theshell and cause an error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
+* This command creates lots of files simultaneously, to reduce the burden on the file system, I set max CPU = 16
+* Remember to use "..." to quote the fastq pattern like this, otherwise, the wildcard will be expanded in the shell and cause an error: `--fastq_pattern "path/pattern/to/your/bcl2fastq/results/fastq.gz"`
 * An error will occur if the`output_dir`already exists.
 {% endhint %}
 

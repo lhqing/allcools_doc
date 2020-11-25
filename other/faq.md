@@ -21,21 +21,21 @@ $ which python
 # ~/work/miniconda3/envs/mapping
 ```
 
-## Why using conda environment?
+## Why using a conda environment?
 
-* Using environment make sure all the mapping related package is handled by conda and pip in a stand alone place. 
+* Using environment make sure all the mapping related package is handled by conda and pip in a stand-alone place. 
 * It will not impact any of your other installed packages and vise versa.
-* The only drawback of using environment is you need to activate environment every time. Because everything is only installed for that environment.
+* The only drawback of using the environment is you need to activate the environment every time. Because everything is only installed for that environment.
 
-## What is PlateInfo file?
+## What is the PlateInfo file?
 
 * A plain text file with experimental, library, and barcoding information.
 * **This file needs to be made manually for each library.**
 * The main content of this file is the **PCR index information for each plate in the library**, so the pipeline can properly **demultiplex and name the raw FASTQ files** with that information.
 
-## What is MappingConfig file?
+## What is the MappingConfig file?
 
-* It contains all the parameters of mapping pipeline in [INI format](https://en.wikipedia.org/wiki/INI_file)
+* It contains all the parameters of the mapping pipeline in [INI format](https://en.wikipedia.org/wiki/INI_file)
 * Briefing on INI format:
 
   ```text
@@ -49,11 +49,11 @@ $ which python
   key2=value2
   ```
 
-* Currently, the pipeline don’t allow to change the sections and keys, so just change values according to your needs.
+* Currently, the pipeline doesn’t allow you to change the sections and keys, so just change values according to your needs.
 
 ## What is Snakemake?
 
-[Snakemake](https://snakemake.github.io/) is a package for writing reproducible pipeline. It use a `Snakefile` to describe all steps of a pipeline. During demultiplex, I prepared this file for you and saved it in each of the sub directory. All you need to do is execute these files \(via snakemake, commands also summarized during demultiplex\).
+[Snakemake](https://snakemake.github.io/) is a package for writing a reproducible pipeline. It uses `Snakefile` to describe all steps of a pipeline. During demultiplex, I prepared this file for you and saved it in each of the subdirectories. All you need to do is execute these files \(via snakemake, commands also summarized during demultiplexing\).
 
 ## What is netCDF4?
 

@@ -10,7 +10,7 @@ Another thing is the lambda DNA spike-in as a non-conversion estimation \(we do 
 
 ## Bismark Reference
 
-Use bismark to prepare genome index, see its documentation [here](https://rawgit.com/FelixKrueger/Bismark/master/Docs/Bismark_User_Guide.html#i-running-bismark-genome-preparation). Note that we use bowtie2 for snmC-seq and snmCT-seq \(that's bismark's default also\), and bowtie1 for snm3C-seq \([the same as snm3C-seq paper](https://www.nature.com/articles/s41592-019-0547-z)\).
+Use bismark to prepare the genome index, see its documentation [here](https://rawgit.com/FelixKrueger/Bismark/master/Docs/Bismark_User_Guide.html#i-running-bismark-genome-preparation). Note that we use bowtie2 for snmC-seq and snmCT-seq \(that's bismark's default also\), and bowtie1 for snm3C-seq \([the same as snm3C-seq paper](https://www.nature.com/articles/s41592-019-0547-z)\).
 
 ## Gene Annotation GTF \(mct only\)
 
