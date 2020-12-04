@@ -44,6 +44,7 @@ dependencies:
   - cutadapt=2.10
   - snakemake=5.17
   - bismark=0.20
+  - samtools=1.9
   - picard
   - bedtools=2.29
   - star=2.7.3a
@@ -59,8 +60,6 @@ dependencies:
     - papermill
 
 ```
-
-{% file src=".gitbook/assets/mapping\_env.yaml" caption="mapping\_env.yaml" %}
 
 {% hint style="info" %}
 [Why using a conda environment?](other/faq.md#why-using-conda-environment)
