@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 - 12/10/2020
+
+* Add plots in mapping summary
+* Trim more adapters for the mCT pipeline
+* `make-samplesheet` generate two versions of the novaseq sample sheet
+
 ## v1.1.0 - 10/07/2020
 
 * Support start mapping from cell-level FASTQ

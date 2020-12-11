@@ -177,7 +177,11 @@ Optional inputs:
 ## Output
 
 * PlateInfo file recording library preparation information
-* Two sample sheets for `bcl2fastq` demultiplexing. One for MiSeq, one for NovaSeq.
+* Three sample sheets for `bcl2fastq` demultiplexing. One for MiSeq, two for NovaSeq \(v1, or v1.5\).
+
+{% hint style="info" %}
+For libraries sequenced with illumina v1.5 S4 kit, the i5 barcodes in the sample sheet are reverse complemented.
+{% endhint %}
 
 ### Output after bcl2fastq
 

@@ -90,9 +90,7 @@ conda deactivate
 ```text
 # enter mapping env first
 
-git clone https://github.com/lhqing/cemba_data.git
-cd cemba_data
-pip install .
+pip install cemba-data
 ```
 
 ### Install Allcools

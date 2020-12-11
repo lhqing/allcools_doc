@@ -57,7 +57,7 @@ optional arguments:
 
 ### Example of MappingConfig files
 
-{% file src="../../.gitbook/assets/mc-v2.mouse.mapping\_config.ini" caption="snmC-seq3, Mouse, V2 barcode" %}
+{% file src="../../.gitbook/assets/mc-v2.mouse.mapping\_config \(1\).ini" caption="snmC-seq3, Mouse, V2 barcode" %}
 
 {% file src="../../.gitbook/assets/mct-v2.mouse.mapping\_config.ini" caption="snmCT-seq, Mouse, V2 barcode" %}
 
