@@ -10,17 +10,11 @@ YAP is a full pipeline designed for raw sequencing data \(BCL files and raw FAST
 
 ## What is YAP?
 
-YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for several single nucleus methyl-cytosine sequencing \(snmC-seq\) based technologies.
+YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for several single nucleus methyl-cytosine sequencing \(snmC-seq\) based technologies \(see below\).
+
+It starts from demultiplexing FASTQ files and ends at generating single-cell [ALLC files](tech-background/file-formats.md#allc-file).
 
 [See source code on Github.](https://github.com/lhqing/cemba_data)
-
-### Authors
-
-[Hanqing Liu](https://github.com/lhqing)
-
-Jingtian Zhou
-
-Wei Tian
 
 ## Technologies Supported
 
@@ -40,4 +34,12 @@ Wei Tian
 ## After Mapping?
 
 Check out [ALLCools](https://github.com/lhqing/ALLCools), the package for downstream cell-level and cluster-level analysis.
+
+## Authors
+
+[Hanqing Liu](https://github.com/lhqing)
+
+Jingtian Zhou
+
+Wei Tian
 
