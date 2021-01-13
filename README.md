@@ -41,5 +41,7 @@ Check out [ALLCools](https://github.com/lhqing/ALLCools), the package for downst
 
 Jingtian Zhou
 
+Chongyuan Luo
+
 Wei Tian
 
