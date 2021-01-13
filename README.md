@@ -14,9 +14,13 @@ YAP \(**Y**et **A**nother-**P**ipeline \) is a mapping pipeline designed for sev
 
 [See source code on Github.](https://github.com/lhqing/cemba_data)
 
-### Author
+### Authors
 
 [Hanqing Liu](https://github.com/lhqing)
+
+Jingtian Zhou
+
+Wei Tian
 
 ## Technologies Supported
 
