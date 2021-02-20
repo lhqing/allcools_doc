@@ -27,6 +27,7 @@ Just like mapping, we use the `snakemake` to execute all the specific commands. 
 
 1. Generate a group-merged pseudo-bulk ALLC file for each group. These ALLC files have the same format as single-cell ALLC files. All the base counts in the same position are added together.
 2. Generate BigWig files for each pseudo-bulk ALLC file. The mC context and bin size of the BigWig are provided by you.
+3. OPTIONAL: Extract mCG sites from the merged ALLC. These files can be used to call CpG Differential Methylated Regions \(CG-DMRs\)
 
 To generate the Snakefile, just run
 
