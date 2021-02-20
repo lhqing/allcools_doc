@@ -29,6 +29,10 @@
   * [All Mapping Metrics](mapping-metrics/all-mapping-metrics.md)
 * [Generate MCDS](generate-mcds.md)
 
+## Pseudo-bulk
+
+* [Methylome Pseudo-bulk](pseudo-bulk/methylome-pseudo-bulk.md)
+
 ## Other
 
 * [FAQ](other/faq.md)
