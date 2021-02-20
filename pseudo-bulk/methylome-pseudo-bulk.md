@@ -11,7 +11,7 @@ After single-cell level analysis, the next step is to merge the single-cell meth
 * single-cell ALLC files from mapping
 * cell group labels from the metadata or clustering analysis
 
-These two kinds of inputs need to be organized in an **ALLC table** like this:
+These two kinds of inputs need to be organized in a **Tab-separated** **ALLC table** like this:
 
 | NO HEADER |  |
 | :--- | :--- |
