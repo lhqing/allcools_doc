@@ -100,6 +100,10 @@ DVC200116_P120_VC_B_M_2_4	4	C9
 DVC200116_P120_VC_B_M_2_4	5	P10
 DVC200116_P120_VC_B_M_2_4	6	J4
 ```
+
+{% hint style="success" %}
+Starting v1.3.5, If each plate in your library is indexed by a single PCR index, you can put each plate in a single row with multiplex\_group = 1, the demultiplex pipeline will recognize it and automatically separate files into multiple multiplex groups.  
+{% endhint %}
 {% endtab %}
 
 {% tab title="V1 Index Library" %}
