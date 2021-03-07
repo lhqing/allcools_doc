@@ -93,6 +93,13 @@ conda deactivate
 pip install cemba-data
 ```
 
+### Update YAP
+
+```text
+# enter mapping env first
+pip install --upgrade cemba-data
+```
+
 ### Install Allcools
 
 ```text
@@ -103,12 +110,11 @@ cd ALLCools
 pip install .
 ```
 
-### Update YAP or Allcools
+### Update ALLCools
 
 ```text
 # enter mapping env first
-
-cd /path/to/yap/or/allcools/
+cd ALLCools
 git pull
 pip install .
 ```

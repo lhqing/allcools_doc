@@ -45,9 +45,46 @@ yap default-plate-info -v V2
 ### PlateInfo Examples
 
 {% tabs %}
+{% tab title="V2 Single PCR Index Library" %}
+* This example contains four plates
+* Each plate is indexed by one PCR index
+* Primer names must be unique for the same sequencing run.
+* **PlateInfo section must be Tab `\t` separated.**
+* When demultiplexing, yap will automatically separate the single multiplex group into six, so during mapping, each plate will have six commands, the same as "V2 Index Library" on the next tab.
+
+```text
+[CriticalInfo]
+n_random_index=384
+input_plate_size=384
+pool_id=Pool_9
+tube_label=Pool_9
+email=your_email_address1@salk.edu;your_email_address2@salk.edu;your_email_address3@salk.edu
+
+[LibraryInfo]
+lib_comp_date=200518
+project=DVC
+organism=mm
+dev_stage_age=P120
+tissue_cell_type=VC
+lib_type=snmCT-seq
+sequencer=NovaSeq
+se_pe=pe
+read_length=150
+requested_by=HL
+
+[PlateInfo]
+plate_id	multiplex_group	primer_name
+DVC200116_P120_VC_B_M_1_4	1	D11
+DVC200116_P120_VC_B_M_1_6	1	N6
+DVC200116_P120_VC_B_M_1_8	1	K22
+DVC200116_P120_VC_B_M_2_4	1	P8
+# each plate is indexed by single PCR index, use multiplex_group 1 in this case
+```
+{% endtab %}
+
 {% tab title="V2 Index Library" %}
 * This example contains four plates
-* Every plate has six multiplex groups
+* Each plate has six multiplex groups
 * All primer names must be unique for the same sequencing run.
 * **PlateInfo section must be Tab `\t` separated.**
 
@@ -57,7 +94,7 @@ n_random_index=384
 input_plate_size=384
 pool_id=Pool_9
 tube_label=Pool_9
-email=hanliu@salk.edu;bawang@salk.edu;abartlett@salk.edu
+email=your_email_address1@salk.edu;your_email_address2@salk.edu;your_email_address3@salk.edu
 
 
 [LibraryInfo]
