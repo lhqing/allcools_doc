@@ -8,6 +8,17 @@
 * [miniconda \(recommended\)](https://conda.io/miniconda.html)
 * [anaconda \(larger\)](https://www.anaconda.com/download/)
 
+### Conda init
+
+After installed conda, use `conda init` on your favorite shell
+
+```text
+# e.g., bash or zsh
+conda init bash
+
+# you need to restart shell after conda init
+```
+
 ### Add channels
 
 ```text
@@ -18,9 +29,9 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-### Create a mapping environment and install required packages
+### Create Environment With Required Packages
 
-This command will create a conda environment called "mapping" and install all required packages for you. The `mapping_env.yaml` contains the detail about the environment, you can download that file below.
+This command will create a conda environment called "mapping" and install all required packages for you. The `mapping_env.yaml` contains the detail about the environment, you can copy the content of that file below.
 
 ```text
 # conda is a bit slow, this step will take ~30 min in my server, 
@@ -30,7 +41,7 @@ conda env create -f mapping_env.yaml
 
 ### Content of mapping\_env.yaml file
 
-```text
+```yaml
 name: mapping
 channels:
   - conda-forge
@@ -104,18 +115,13 @@ pip install --upgrade cemba-data
 
 ```text
 # enter mapping env first
-
-git clone https://github.com/lhqing/ALLCools.git
-cd ALLCools
-pip install .
+pip install allcools
 ```
 
 ### Update ALLCools
 
 ```text
 # enter mapping env first
-cd ALLCools
-git pull
-pip install .
+pip install --upgrade allcools
 ```
 
